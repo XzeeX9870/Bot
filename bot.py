@@ -4,12 +4,12 @@ import socket, struct, time, json
 
 # ==== LOAD CONFIG ====
 with open("config.json", "r") as f:
-    config = json.load(f)
+    cfg = json.load(f)
 
-TOKEN = config["TOKEN"]
-CHANNEL_ID = config["CHANNEL_ID"]
-SERVER_IP = config["SERVER_IP"]
-SERVER_PORT = config["SERVER_PORT"]
+TOKEN = cfg["TOKEN"]
+CHANNEL_ID = int(cfg["CHANNEL_ID"])
+SERVER_IP = cfg["SERVER_IP"]
+SERVER_PORT = int(cfg["SERVER_PORT"])
 
 LOGO_URL = "https://cdn.discordapp.com/attachments/1388392100394958879/1388468081084469318/IMG-20250626-WA0001.jpg"
 COLOR_GREEN = discord.Color.from_str("#1abc9c")
